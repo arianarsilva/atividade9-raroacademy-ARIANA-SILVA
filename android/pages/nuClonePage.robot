@@ -20,12 +20,14 @@ ${SALDO_OCULTO}         xpath=//android.view.View[contains(@content-desc,"Conta"
 ${FATURA_INFO}          xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]
 ${EMPRESTIMO_CARD}      xpath=//android.view.View[contains(@content-desc,"Valor disponível de até")]
 ${INVESTIMENTO_CARD}    xpath=//android.view.View[contains(@content-desc,"Investimentos")]
+${INV_BTN}              xpath=//android.view.View[contains(@content-desc,"Conhecer")]
+${SEGURO_CARD}          xpath=//android.view.View[contains(@content-desc,"Seguro de vida")]
 
 
 
 *** Keywords ***
 Dado que o usuário está logado
-    Visualiza texto    ${NAME}    Olá, Breno Freitas    
+    Visualiza elemento   ${ICONE_PERFIL}
     # Visualiza elemento    ${ICONE_PERFIL}
 Quando acessar à página inicial
     Visualiza texto    ${NAME}    Olá, Breno Freitas
@@ -47,11 +49,22 @@ Então será possível visualizar informações sobre a fatura atual
     Visualiza texto    ${FATURA_INFO}    R$ 780,72
     Visualiza texto    ${FATURA_INFO}    Limite disponível
     Visualiza texto    ${FATURA_INFO}    R$ 806,78
+    Espera o elemento e faz o clique    ${FATURA_INFO}
 
 Então será possível visualizar informações sobre empréstimo
     Swipe By Percent    50    50    50    20
     Visualiza texto    ${EMPRESTIMO_CARD}    Empréstimo\nValor disponível de até\nR$ 10.000,00
+    Click Element    ${EMPRESTIMO_CARD}
 
 Então será possível visualizar informações sobre investimentos
-    Swipe By Percent    50    50    50    5
-    Wait Until Element Is Visible    ${INVESTIMENTO_CARD}
+    Swipe By Percent    50    50    50    0
+    Visualiza texto    ${INVESTIMENTO_CARD}    Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital.
+
+    Espera o elemento e faz o clique    ${INVESTIMENTO_CARD}
+
+Então será possível visualizar informações sobre Seguro de Vida
+    Swipe By Percent    50    90    50    5
+    Espera o elemento e faz o clique    ${SEGURO_CARD}
+
+Então será possível visualizar informações sobre pagamento pelo WhatsApp
+    Swipe By Percent    50    90    50    0

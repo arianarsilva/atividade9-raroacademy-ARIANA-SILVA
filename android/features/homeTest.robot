@@ -37,3 +37,14 @@ Verificar se é possível visualizar a funcionalidade de investimentos
     Dado que o usuário está logado
     Quando acessar à página inicial
     Então será possível visualizar informações sobre investimentos
+    # Se der tempo testar botão conhecer
+
+Verificar se é possível visualizar a funcionalidade de Seguro de Vida
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar informações sobre Seguro de Vida
+
+Verificar funcionalidade de pagamento pelo WhatsApp
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar informações sobre pagamento pelo WhatsApp

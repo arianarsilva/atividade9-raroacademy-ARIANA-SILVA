@@ -18,4 +18,4 @@ Visualiza texto
 
 Visualiza elemento
     [Arguments]                  ${elemento}
-    Element Should Be Visible    ${elemento}
+    Wait Until Element Is Visible    ${elemento}
