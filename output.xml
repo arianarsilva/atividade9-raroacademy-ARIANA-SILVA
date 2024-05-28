@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-28T16:19:21.194050" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-28T17:52:55.161945" rpa="false" schemaversion="5">
 <suite id="s1" name="homeTest" source="c:\Users\User\Documents\QA - Raro Academy\atividade9-raroacademy-ARIANA-SILVA\android\features\homeTest.robot">
-<test id="s1-t1" name="Verificar se o valor da fatura atual está visível" line="26">
+<test id="s1-t1" name="Verificar se é possível visualizar a funcionalidade de investimentos" line="36">
 <kw name="Abrir App" owner="config" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${APPIUM_URL}</arg>
@@ -17,220 +17,103 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-05-28T16:19:21.627878" elapsed="15.365985"/>
+<status status="PASS" start="2024-05-28T17:52:55.559945" elapsed="10.847142"/>
 </kw>
-<status status="PASS" start="2024-05-28T16:19:21.626679" elapsed="15.367184"/>
+<status status="PASS" start="2024-05-28T17:52:55.558947" elapsed="10.849140"/>
 </kw>
 <kw name="Dado que o usuário está logado" owner="nuClonePage">
 <kw name="Visualiza texto" owner="commons">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:37.697036" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-28T17:53:07.697264" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
 <arg>${elemento}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2024-05-28T16:19:36.995863" elapsed="0.702172"/>
+<status status="PASS" start="2024-05-28T17:53:06.411085" elapsed="1.289178"/>
 </kw>
 <kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:37.777266" level="INFO">Element 'xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]' attribute 'content-desc' value 'Olá, Breno Freitas' </msg>
-<msg time="2024-05-28T16:19:37.777266" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
-<msg time="2024-05-28T16:19:37.777266" level="INFO">${contentDesc} = Olá, Breno Freitas</msg>
+<msg time="2024-05-28T17:53:07.893146" level="INFO">Element 'xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]' attribute 'content-desc' value 'Olá, Breno Freitas' </msg>
+<msg time="2024-05-28T17:53:07.894146" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-28T17:53:07.894670" level="INFO">${contentDesc} = Olá, Breno Freitas</msg>
 <var>${contentDesc}</var>
 <arg>${elemento}</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-05-28T16:19:37.698035" elapsed="0.079231"/>
+<status status="PASS" start="2024-05-28T17:53:07.701263" elapsed="0.193407"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${contentDesc}</arg>
 <arg>${nome}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-05-28T16:19:37.777266" elapsed="0.001002"/>
+<status status="PASS" start="2024-05-28T17:53:07.895190" elapsed="0.000000"/>
 </kw>
 <arg>${NAME}</arg>
 <arg>Olá, Breno Freitas</arg>
-<status status="PASS" start="2024-05-28T16:19:36.994863" elapsed="0.783405"/>
+<status status="PASS" start="2024-05-28T17:53:06.410084" elapsed="1.486101"/>
 </kw>
-<status status="PASS" start="2024-05-28T16:19:36.994863" elapsed="0.783405"/>
+<status status="PASS" start="2024-05-28T17:53:06.409084" elapsed="1.487101"/>
 </kw>
 <kw name="Quando acessar à página inicial" owner="nuClonePage">
 <kw name="Visualiza texto" owner="commons">
 <kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:37.839449" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-28T17:53:08.062274" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
 <arg>${elemento}</arg>
 <doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2024-05-28T16:19:37.779267" elapsed="0.060182"/>
+<status status="PASS" start="2024-05-28T17:53:07.900184" elapsed="0.162090"/>
 </kw>
 <kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:37.886102" level="INFO">Element 'xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]' attribute 'content-desc' value 'Olá, Breno Freitas' </msg>
-<msg time="2024-05-28T16:19:37.886102" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
-<msg time="2024-05-28T16:19:37.886102" level="INFO">${contentDesc} = Olá, Breno Freitas</msg>
+<msg time="2024-05-28T17:53:08.229106" level="INFO">Element 'xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]' attribute 'content-desc' value 'Olá, Breno Freitas' </msg>
+<msg time="2024-05-28T17:53:08.229106" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-28T17:53:08.229106" level="INFO">${contentDesc} = Olá, Breno Freitas</msg>
 <var>${contentDesc}</var>
 <arg>${elemento}</arg>
 <arg>content-desc</arg>
 <doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-05-28T16:19:37.839449" elapsed="0.046653"/>
+<status status="PASS" start="2024-05-28T17:53:08.063272" elapsed="0.166834"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${contentDesc}</arg>
 <arg>${nome}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-05-28T16:19:37.886611" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-28T17:53:08.230106" elapsed="0.000518"/>
 </kw>
 <arg>${NAME}</arg>
 <arg>Olá, Breno Freitas</arg>
-<status status="PASS" start="2024-05-28T16:19:37.779267" elapsed="0.107344"/>
+<status status="PASS" start="2024-05-28T17:53:07.899185" elapsed="0.331439"/>
 </kw>
-<status status="PASS" start="2024-05-28T16:19:37.778268" elapsed="0.108343"/>
+<status status="PASS" start="2024-05-28T17:53:07.898184" elapsed="0.332440"/>
 </kw>
-<kw name="Então será possível visualizar informações sobre a fatura atual" owner="nuClonePage">
-<kw name="Visualiza texto" owner="commons">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:37.935513" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<arg>${elemento}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2024-05-28T16:19:37.887609" elapsed="0.047904"/>
+<kw name="Então será possível visualizar informações sobre investimentos" owner="nuClonePage">
+<kw name="Swipe By Percent" owner="AppiumLibrary">
+<arg>50</arg>
+<arg>50</arg>
+<arg>50</arg>
+<arg>5</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" start="2024-05-28T17:53:08.235620" elapsed="1.683479"/>
 </kw>
-<kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:37.981245" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78' </msg>
-<msg time="2024-05-28T16:19:37.981245" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<msg time="2024-05-28T16:19:37.981245" level="INFO">${contentDesc} = Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78</msg>
-<var>${contentDesc}</var>
-<arg>${elemento}</arg>
-<arg>content-desc</arg>
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-05-28T16:19:37.935513" elapsed="0.045732"/>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T17:53:13.002525" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Investimentos")]</msg>
+<arg>${INVESTIMENTO_CARD}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-28T17:53:09.919099" elapsed="3.086425"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${contentDesc}</arg>
-<arg>${nome}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-05-28T16:19:37.982273" elapsed="0.000000"/>
-</kw>
-<arg>${FATURA_INFO}</arg>
-<arg>Fatura atual</arg>
-<status status="PASS" start="2024-05-28T16:19:37.887609" elapsed="0.094664"/>
-</kw>
-<kw name="Visualiza texto" owner="commons">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:38.027053" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<arg>${elemento}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2024-05-28T16:19:37.982273" elapsed="0.044780"/>
-</kw>
-<kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:38.072070" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78' </msg>
-<msg time="2024-05-28T16:19:38.072070" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<msg time="2024-05-28T16:19:38.073080" level="INFO">${contentDesc} = Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78</msg>
-<var>${contentDesc}</var>
-<arg>${elemento}</arg>
-<arg>content-desc</arg>
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-05-28T16:19:38.028057" elapsed="0.045023"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${contentDesc}</arg>
-<arg>${nome}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-05-28T16:19:38.073080" elapsed="0.000000"/>
-</kw>
-<arg>${FATURA_INFO}</arg>
-<arg>R$ 780,72</arg>
-<status status="PASS" start="2024-05-28T16:19:37.982273" elapsed="0.090807"/>
-</kw>
-<kw name="Visualiza texto" owner="commons">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:38.113851" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<arg>${elemento}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2024-05-28T16:19:38.073080" elapsed="0.040771"/>
-</kw>
-<kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:38.158264" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78' </msg>
-<msg time="2024-05-28T16:19:38.158264" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<msg time="2024-05-28T16:19:38.158264" level="INFO">${contentDesc} = Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78</msg>
-<var>${contentDesc}</var>
-<arg>${elemento}</arg>
-<arg>content-desc</arg>
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-05-28T16:19:38.114853" elapsed="0.043411"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${contentDesc}</arg>
-<arg>${nome}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-05-28T16:19:38.158264" elapsed="0.001006"/>
-</kw>
-<arg>${FATURA_INFO}</arg>
-<arg>Limite disponível</arg>
-<status status="PASS" start="2024-05-28T16:19:38.073080" elapsed="0.086190"/>
-</kw>
-<kw name="Visualiza texto" owner="commons">
-<kw name="Element Should Be Visible" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:38.200864" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<arg>${elemento}</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="PASS" start="2024-05-28T16:19:38.159270" elapsed="0.042595"/>
-</kw>
-<kw name="Get Element Attribute" owner="AppiumLibrary">
-<msg time="2024-05-28T16:19:38.244067" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78' </msg>
-<msg time="2024-05-28T16:19:38.244067" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
-<msg time="2024-05-28T16:19:38.244067" level="INFO">${contentDesc} = Cartão de Crédito
-Fatura atual
-R$ 780,72
-Limite disponível R$ 806,78</msg>
-<var>${contentDesc}</var>
-<arg>${elemento}</arg>
-<arg>content-desc</arg>
-<doc>Get element attribute using given attribute: name, value,...</doc>
-<status status="PASS" start="2024-05-28T16:19:38.201865" elapsed="0.042202"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${contentDesc}</arg>
-<arg>${nome}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-05-28T16:19:38.245134" elapsed="0.000000"/>
-</kw>
-<arg>${FATURA_INFO}</arg>
-<arg>R$ 806,78</arg>
-<status status="PASS" start="2024-05-28T16:19:38.159270" elapsed="0.085864"/>
-</kw>
-<status status="PASS" start="2024-05-28T16:19:37.887609" elapsed="0.357525"/>
+<status status="PASS" start="2024-05-28T17:53:08.234620" elapsed="4.770904"/>
 </kw>
 <kw name="Teardown" owner="config" type="TEARDOWN">
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2024-05-28T16:19:38.246067" elapsed="0.000618"/>
+<status status="PASS" start="2024-05-28T17:53:13.009044" elapsed="0.000000"/>
 </kw>
 <kw name="Close All Applications" owner="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" start="2024-05-28T16:19:38.246934" elapsed="0.547275"/>
+<status status="PASS" start="2024-05-28T17:53:13.010043" elapsed="2.651090"/>
 </kw>
-<status status="PASS" start="2024-05-28T16:19:38.246067" elapsed="0.548142"/>
+<status status="PASS" start="2024-05-28T17:53:13.008044" elapsed="2.654089"/>
 </kw>
-<status status="PASS" start="2024-05-28T16:19:21.625296" elapsed="17.169910"/>
+<status status="PASS" start="2024-05-28T17:52:55.550944" elapsed="20.147717"/>
 </test>
-<status status="PASS" start="2024-05-28T16:19:21.240639" elapsed="17.555538"/>
+<status status="PASS" start="2024-05-28T17:52:55.175283" elapsed="20.532893"/>
 </suite>
 <statistics>
 <total>

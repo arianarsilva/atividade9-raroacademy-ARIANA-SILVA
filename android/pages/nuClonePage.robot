@@ -18,6 +18,8 @@ ${MEUS_CARTOES}         xpath=//android.view.View[@content-desc="Meus cartões"]
 ${EYE_ICON}             xpath=//android.widget.ScrollView/android.widget.Button[1]
 ${SALDO_OCULTO}         xpath=//android.view.View[contains(@content-desc,"Conta")]
 ${FATURA_INFO}          xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]
+${EMPRESTIMO_CARD}      xpath=//android.view.View[contains(@content-desc,"Valor disponível de até")]
+${INVESTIMENTO_CARD}    xpath=//android.view.View[contains(@content-desc,"Investimentos")]
 
 
 
@@ -45,3 +47,11 @@ Então será possível visualizar informações sobre a fatura atual
     Visualiza texto    ${FATURA_INFO}    R$ 780,72
     Visualiza texto    ${FATURA_INFO}    Limite disponível
     Visualiza texto    ${FATURA_INFO}    R$ 806,78
+
+Então será possível visualizar informações sobre empréstimo
+    Swipe By Percent    50    50    50    20
+    Visualiza texto    ${EMPRESTIMO_CARD}    Empréstimo\nValor disponível de até\nR$ 10.000,00
+
+Então será possível visualizar informações sobre investimentos
+    Swipe By Percent    50    50    50    5
+    Wait Until Element Is Visible    ${INVESTIMENTO_CARD}

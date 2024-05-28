@@ -13,7 +13,6 @@
             "terminal": "integrated",
             "env": {},
             "args": [],
-            "timeout": 20000
         }
     ]
 }

@@ -27,3 +27,13 @@ Verificar se o valor da fatura atual está visível
     Dado que o usuário está logado
     Quando acessar à página inicial
     Então será possível visualizar informações sobre a fatura atual
+
+Verificar se é possível visualizar a funcionalidade de empréstimo
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar informações sobre empréstimo
+
+Verificar se é possível visualizar a funcionalidade de investimentos
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar informações sobre investimentos
