@@ -12,7 +12,8 @@
             "target": "^\"\\${file}\"",
             "terminal": "integrated",
             "env": {},
-            "args": []
+            "args": [],
+            "timeout": 20000
         }
     ]
 }

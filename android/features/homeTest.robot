@@ -7,8 +7,23 @@ Test Teardown      Teardown
 
 *** Test Cases ***
 
-Verificar campo de Conta
-    Dado que o usuário está na tela Inicial
-    Quando o usuário acessar o campo de Conta
-    # Então será possível verificar seu saldo
+Verificar informação de saldo
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível verificar seu saldo
 
+Verificar informação de cartões
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível acessar informações de cartões
+
+Verificar ícone "Olho" para ocultar saldo
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    E clicar no ícone "olho"
+    Então será possível ocultar saldo da tela incial
+
+Verificar se o valor da fatura atual está visível
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar informações sobre a fatura atual

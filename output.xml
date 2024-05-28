@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-27T22:42:05.523663" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-28T16:19:21.194050" rpa="false" schemaversion="5">
 <suite id="s1" name="homeTest" source="c:\Users\User\Documents\QA - Raro Academy\atividade9-raroacademy-ARIANA-SILVA\android\features\homeTest.robot">
-<test id="s1-t1" name="Verificar campo de Conta" line="10">
+<test id="s1-t1" name="Verificar se o valor da fatura atual está visível" line="26">
 <kw name="Abrir App" owner="config" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${APPIUM_URL}</arg>
@@ -17,508 +17,231 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-05-27T22:42:05.900246" elapsed="21.775650"/>
+<status status="PASS" start="2024-05-28T16:19:21.627878" elapsed="15.365985"/>
 </kw>
-<status status="PASS" start="2024-05-27T22:42:05.898240" elapsed="21.778654"/>
+<status status="PASS" start="2024-05-28T16:19:21.626679" elapsed="15.367184"/>
 </kw>
-<kw name="Dado que o usuário está na tela Inicial" owner="nuClonePage">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2024-05-27T22:42:28.185006" level="FAIL">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
-	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)
-</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2024-05-27T22:42:28.138423" elapsed="0.060795">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
+<kw name="Dado que o usuário está logado" owner="nuClonePage">
+<kw name="Visualiza texto" owner="commons">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:37.697036" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<arg>${elemento}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-05-28T16:19:36.995863" elapsed="0.702172"/>
 </kw>
-<msg time="2024-05-27T22:42:28.202216" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</msg>
-<msg time="2024-05-27T22:42:28.216790" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Olá, Breno Freitas")]</msg>
-<msg time="2024-05-27T22:42:28.217790" level="FAIL">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
-	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)
-</msg>
-<arg>${OLA}</arg>
-<doc>Waits until element specified with `locator` is visible.</doc>
-<status status="FAIL" start="2024-05-27T22:42:27.702448" elapsed="0.518342">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:37.777266" level="INFO">Element 'xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]' attribute 'content-desc' value 'Olá, Breno Freitas' </msg>
+<msg time="2024-05-28T16:19:37.777266" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-28T16:19:37.777266" level="INFO">${contentDesc} = Olá, Breno Freitas</msg>
+<var>${contentDesc}</var>
+<arg>${elemento}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-28T16:19:37.698035" elapsed="0.079231"/>
 </kw>
-<kw name="Element Should Contain Text" owner="AppiumLibrary">
-<arg>${OLA}</arg>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${contentDesc}</arg>
+<arg>${nome}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-28T16:19:37.777266" elapsed="0.001002"/>
+</kw>
+<arg>${NAME}</arg>
 <arg>Olá, Breno Freitas</arg>
-<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="NOT RUN" start="2024-05-27T22:42:28.221789" elapsed="0.001001"/>
+<status status="PASS" start="2024-05-28T16:19:36.994863" elapsed="0.783405"/>
 </kw>
-<status status="FAIL" start="2024-05-27T22:42:27.701448" elapsed="0.521342">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
+<status status="PASS" start="2024-05-28T16:19:36.994863" elapsed="0.783405"/>
+</kw>
+<kw name="Quando acessar à página inicial" owner="nuClonePage">
+<kw name="Visualiza texto" owner="commons">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:37.839449" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<arg>${elemento}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-05-28T16:19:37.779267" elapsed="0.060182"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:37.886102" level="INFO">Element 'xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]' attribute 'content-desc' value 'Olá, Breno Freitas' </msg>
+<msg time="2024-05-28T16:19:37.886102" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<msg time="2024-05-28T16:19:37.886102" level="INFO">${contentDesc} = Olá, Breno Freitas</msg>
+<var>${contentDesc}</var>
+<arg>${elemento}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-28T16:19:37.839449" elapsed="0.046653"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${contentDesc}</arg>
+<arg>${nome}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-28T16:19:37.886611" elapsed="0.000000"/>
+</kw>
+<arg>${NAME}</arg>
+<arg>Olá, Breno Freitas</arg>
+<status status="PASS" start="2024-05-28T16:19:37.779267" elapsed="0.107344"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:37.778268" elapsed="0.108343"/>
+</kw>
+<kw name="Então será possível visualizar informações sobre a fatura atual" owner="nuClonePage">
+<kw name="Visualiza texto" owner="commons">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:37.935513" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<arg>${elemento}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-05-28T16:19:37.887609" elapsed="0.047904"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:37.981245" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78' </msg>
+<msg time="2024-05-28T16:19:37.981245" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<msg time="2024-05-28T16:19:37.981245" level="INFO">${contentDesc} = Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78</msg>
+<var>${contentDesc}</var>
+<arg>${elemento}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-28T16:19:37.935513" elapsed="0.045732"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${contentDesc}</arg>
+<arg>${nome}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-28T16:19:37.982273" elapsed="0.000000"/>
+</kw>
+<arg>${FATURA_INFO}</arg>
+<arg>Fatura atual</arg>
+<status status="PASS" start="2024-05-28T16:19:37.887609" elapsed="0.094664"/>
+</kw>
+<kw name="Visualiza texto" owner="commons">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:38.027053" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<arg>${elemento}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-05-28T16:19:37.982273" elapsed="0.044780"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:38.072070" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78' </msg>
+<msg time="2024-05-28T16:19:38.072070" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<msg time="2024-05-28T16:19:38.073080" level="INFO">${contentDesc} = Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78</msg>
+<var>${contentDesc}</var>
+<arg>${elemento}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-28T16:19:38.028057" elapsed="0.045023"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${contentDesc}</arg>
+<arg>${nome}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-28T16:19:38.073080" elapsed="0.000000"/>
+</kw>
+<arg>${FATURA_INFO}</arg>
+<arg>R$ 780,72</arg>
+<status status="PASS" start="2024-05-28T16:19:37.982273" elapsed="0.090807"/>
+</kw>
+<kw name="Visualiza texto" owner="commons">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:38.113851" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<arg>${elemento}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-05-28T16:19:38.073080" elapsed="0.040771"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:38.158264" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78' </msg>
+<msg time="2024-05-28T16:19:38.158264" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<msg time="2024-05-28T16:19:38.158264" level="INFO">${contentDesc} = Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78</msg>
+<var>${contentDesc}</var>
+<arg>${elemento}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-28T16:19:38.114853" elapsed="0.043411"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${contentDesc}</arg>
+<arg>${nome}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-28T16:19:38.158264" elapsed="0.001006"/>
+</kw>
+<arg>${FATURA_INFO}</arg>
+<arg>Limite disponível</arg>
+<status status="PASS" start="2024-05-28T16:19:38.073080" elapsed="0.086190"/>
+</kw>
+<kw name="Visualiza texto" owner="commons">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:38.200864" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<arg>${elemento}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-05-28T16:19:38.159270" elapsed="0.042595"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2024-05-28T16:19:38.244067" level="INFO">Element 'xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]' attribute 'content-desc' value 'Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78' </msg>
+<msg time="2024-05-28T16:19:38.244067" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,"Cartão de Crédito")]</msg>
+<msg time="2024-05-28T16:19:38.244067" level="INFO">${contentDesc} = Cartão de Crédito
+Fatura atual
+R$ 780,72
+Limite disponível R$ 806,78</msg>
+<var>${contentDesc}</var>
+<arg>${elemento}</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2024-05-28T16:19:38.201865" elapsed="0.042202"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${contentDesc}</arg>
+<arg>${nome}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-28T16:19:38.245134" elapsed="0.000000"/>
+</kw>
+<arg>${FATURA_INFO}</arg>
+<arg>R$ 806,78</arg>
+<status status="PASS" start="2024-05-28T16:19:38.159270" elapsed="0.085864"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:19:37.887609" elapsed="0.357525"/>
 </kw>
 <kw name="Teardown" owner="config" type="TEARDOWN">
 <kw name="Run Keyword If Test Failed" owner="BuiltIn">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2024-05-27T22:42:28.410450" level="FAIL">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
-	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)
-</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2024-05-27T22:42:28.357884" elapsed="0.057087">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
-</kw>
-<msg time="2024-05-27T22:42:28.416969" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</msg>
-<msg time="2024-05-27T22:42:28.427969" level="FAIL">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
-	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)
-</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2024-05-27T22:42:28.226790" elapsed="0.203182">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
-</kw>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="FAIL" start="2024-05-27T22:42:28.225791" elapsed="0.205181">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
+<status status="PASS" start="2024-05-28T16:19:38.246067" elapsed="0.000618"/>
 </kw>
 <kw name="Close All Applications" owner="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" start="2024-05-27T22:42:28.431968" elapsed="1.507513"/>
+<status status="PASS" start="2024-05-28T16:19:38.246934" elapsed="0.547275"/>
 </kw>
-<status status="FAIL" start="2024-05-27T22:42:28.224790" elapsed="1.715210">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
+<status status="PASS" start="2024-05-28T16:19:38.246067" elapsed="0.548142"/>
 </kw>
-<status status="FAIL" start="2024-05-27T22:42:05.896408" elapsed="24.044587">InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)
-
-Also teardown failed:
-InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</status>
+<status status="PASS" start="2024-05-28T16:19:21.625296" elapsed="17.169910"/>
 </test>
-<status status="FAIL" start="2024-05-27T22:42:05.533287" elapsed="24.428955"/>
+<status status="PASS" start="2024-05-28T16:19:21.240639" elapsed="17.555538"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="homeTest">homeTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="homeTest">homeTest</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-27T22:42:28.202216" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</msg>
-<msg time="2024-05-27T22:42:28.416969" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-Stacktrace:
-io.appium.uiautomator2.common.exceptions.NoSuchDriverException: The session identified by b94b1f46-eb68-4180-9696-47a627d60672 is not known
-	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:54)
-	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:259)
-	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:253)
-	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMes...
-    [ Message content over the limit has been removed. ]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
-	at java.lang.Thread.run(Thread.java:923)</msg>
 </errors>
 </robot>
