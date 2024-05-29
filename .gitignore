@@ -1,5 +1,6 @@
 log.html
-outp.xml
+output.xml
 report.html
+interactive_console_output.xml
 
 .vscode
