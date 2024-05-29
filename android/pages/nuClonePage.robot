@@ -33,7 +33,15 @@ ${TXT_EMPRESTIMO}               xpath=//android.view.View[@content-desc="Emprés
 ${TXT_RECARGA}                  xpath=//android.view.View[@content-desc="Recarga de celular"]
 ${TXT_COBRAR}                   xpath=//android.view.View[@content-desc="Cobrar"]
 ${TXT_DOAR}                     xpath=//android.view.View[@content-desc="Doação"]
-${TXT_ATALHO}                   xpath=//android.view.View[@content-desc="Encontrar atalhos"] 
+${TXT_ATALHO}                   xpath=//android.view.View[@content-desc="Encontrar atalhos"]
+${TXT_FATURA}                   xpath=//android.view.View[@content-desc="Fatura atual"]
+${TXT_LIMITE}                   xpath=//android.view.View[@content-desc="Limite disponível R$ 806,78"]
+${TXT_HISTORICO1}               xpath=//android.view.View[contains(@content-desc,"Pagamento recebido")]
+${TXT_HISTORICO2}               xpath=//android.view.View[contains(@content-desc,"Supermercado")]
+${TXT_HISTORICO3}               xpath=//android.view.View[contains(@content-desc,"Transferência")]
+${VAL_FATURA}                   xpath=//android.view.View[@content-desc="R$ 780,72"]
+
+
 
 ${BTN_INDICAR_AMIGOS}           xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
 ${BTN_INDIQUE}                  xpath=//android.view.View[@content-desc="Indicar amigos"]
@@ -48,6 +56,15 @@ ${BTN_RECARGA}                  xpath=//android.widget.ScrollView/android.widget
 ${BTN_COBRAR}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
 ${BTN_DOAR}                     xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
 ${BTN_ATALHO}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
+${BTN_PAGAR_FATURA}             xpath=//android.view.View[@content-desc="Pagar fatura"]
+${BTN_RESUMO_FATURAS}           xpath=//android.view.View[@content-desc="Resumo de faturas"]
+${BTN_AJUSTE_LIMITES}           xpath=//android.view.View[@content-desc="Ajustar limites"]
+${BTN_CARTAO_VIRTUAL}           xpath=//android.view.View[@content-desc="Cartão virtual"]
+${BTN_BLOQ_CARTAO}              xpath=//android.view.View[@content-desc="Bloquear cartão"]
+${BTN_INDICAR}                  xpath=//android.view.View[@content-desc="Indicar amigos"]      
+
+
+
 
 ${INDIQUE_PAGE}                 xpath=//android.widget.ImageView[contains(@content-desc,"Resgate")]
 ${EMPRESTIMO_PAGE}              xpath=//android.view.View[@content-desc="O valor disponível no momento é de R$ 10.000,00"]
@@ -165,3 +182,44 @@ Então será possível visualizar e clicar no botão de Escontrar Atalhos
     Swipe By Percent    90    40   0   40
     Visualiza texto    ${TXT_ATALHO}    Encontrar atalhos
     Espera o elemento e faz o clique    ${BTN_ATALHO}
+
+# CARTÃO DE CREDITO
+Dado que o usuário está tela inicial
+    Visualiza texto    ${NAME}    Olá, Breno Freitas
+
+Quando acessar à funcionalidade de cartão de crédito
+    Espera o elemento e faz o clique    ${FATURA_INFO}
+
+Então será possível verificar as informações sobre a fatura atual
+    Visualiza texto    ${TXT_FATURA}    Fatura
+    Visualiza texto    ${VAL_FATURA}    R$ 780,72
+    Visualiza texto    ${TXT_LIMITE}    Limite disponível R$ 806,78
+
+Então será possível acessar a funcionalidade de pagar a fatura
+    Visualiza texto      ${BTN_PAGAR_FATURA}    Pagar fatura
+    Click Element        ${BTN_PAGAR_FATURA}
+
+Então será possível acessar o resumo de faturas
+    Visualiza texto    ${BTN_RESUMO_FATURAS}    Resumo de faturas
+    Click Element      ${BTN_RESUMO_FATURAS}
+
+Então será possível verificar acessar a funcionalidade de ajustar limites
+    Visualiza texto    ${BTN_AJUSTE_LIMITES}    Ajustar limites
+    Click Element      ${BTN_AJUSTE_LIMITES}
+
+Então será possível verificar acessar a funcionalidade de cartão virtual
+    Visualiza texto    ${BTN_CARTAO_VIRTUAL}    Cartão virtual
+
+Então será possível verificar acessar a funcionalidade de bloquear cartão
+    Swipe By Percent    80    80    40    40
+    Visualiza texto    ${BTN_BLOQ_CARTAO}    Bloquear cartão
+
+Então será possível verificar acessar a funcionalidade de indicar amigos
+    Swipe By Percent    80    80    40    40
+    Visualiza texto    ${BTN_INDICAR}    Indicar amigos
+
+Então será possível verificar acessar o histórico de gastos do cartão de crédito
+    Swipe By Percent    50    50    50    20
+    Visualiza texto    ${TXT_HISTORICO1}    Pagamento recebido\nOntem\nVOCÊ PAGOU R$ 50,00\nR$ 30,00\nPix
+    Visualiza texto    ${TXT_HISTORICO2}    Supermercado\nOntem\nBRENO FREITAS\nR$ 30,00\nPix
+    Visualiza texto    ${TXT_HISTORICO3}   Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix
