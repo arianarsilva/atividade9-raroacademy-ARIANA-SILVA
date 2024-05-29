@@ -13,6 +13,7 @@ ${NAME}                         xpath=//android.view.View[@content-desc="Olá, B
 ${MEUS_CARTOES}                 xpath=//android.view.View[@content-desc="Meus cartões"]
 ${EYE_ICON}                     xpath=//android.widget.ScrollView/android.widget.Button[1]
 ${INFO_ICON}                    xpath=//android.widget.ScrollView/android.widget.Button[2]
+${INFO_EMPRESTIMO_ICON}        xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button[2]
 ${CONVITE_ICON}                 xpath=//android.widget.ScrollView/android.widget.Button[3]
 ${SALDO_OCULTO}                 xpath=//android.view.View[contains(@content-desc,"Conta")]
 ${FATURA_INFO}                  xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]
@@ -39,10 +40,15 @@ ${TXT_LIMITE}                   xpath=//android.view.View[@content-desc="Limite 
 ${TXT_HISTORICO1}               xpath=//android.view.View[contains(@content-desc,"Pagamento recebido")]
 ${TXT_HISTORICO2}               xpath=//android.view.View[contains(@content-desc,"Supermercado")]
 ${TXT_HISTORICO3}               xpath=//android.view.View[contains(@content-desc,"Transferência")]
+${TXT_EMPRESTIMO2}              xpath=//android.view.View[contains(@content-desc,"Este valor")]
+${TXT_NOVO_EMPRESTIMO}          xpath=//android.view.View[@content-desc="Você não possui nenhum empréstimo ativo."]
+
 ${VAL_FATURA}                   xpath=//android.view.View[@content-desc="R$ 780,72"]
+${LINK_EMPRESTIMO}              xpath=//android.view.View[@content-desc="Entenda como funciona >"]
+${BTN_NOVO_EMPRESTIMO}          xpath=//android.widget.Button[@content-desc="NOVO EMPRÉSTIMO"]
 
-
-
+${BTN_DEPOSITO_VOLTAR}          xpath=//android.widget.Button
+${BTN_EMPRESTIMO_VOLTAR}        xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button[1]
 ${BTN_INDICAR_AMIGOS}           xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
 ${BTN_INDIQUE}                  xpath=//android.view.View[@content-desc="Indicar amigos"]
 ${BTN_WPP}                      xpath=//android.view.View[contains(@content-desc,"Quero conhecer")]  
@@ -62,14 +68,17 @@ ${BTN_AJUSTE_LIMITES}           xpath=//android.view.View[@content-desc="Ajustar
 ${BTN_CARTAO_VIRTUAL}           xpath=//android.view.View[@content-desc="Cartão virtual"]
 ${BTN_BLOQ_CARTAO}              xpath=//android.view.View[@content-desc="Bloquear cartão"]
 ${BTN_INDICAR}                  xpath=//android.view.View[@content-desc="Indicar amigos"]      
-
+${DEPOSITAR_PIX}                xpath=//android.view.View[contains(@content-desc,"Pix")]
+${DEPOSITAR_BOLETO}             xpath=//android.view.View[contains(@content-desc,"Boleto")]   
+${DEPOSITAR_TED}                xpath=//android.view.View[contains(@content-desc,"TED")]
+${DEPOSITAR_SALARIO}            xpath=//android.view.View[contains(@content-desc,"salário")]
 
 
 
 ${INDIQUE_PAGE}                 xpath=//android.widget.ImageView[contains(@content-desc,"Resgate")]
 ${EMPRESTIMO_PAGE}              xpath=//android.view.View[@content-desc="O valor disponível no momento é de R$ 10.000,00"]
 ${COBRAR_PAGE}                   xpath=//android.widget.EditText[@text="R$ 0,00"]
-
+${DEPOSITO_PAGE}                xpath=//android.view.View[contains(@content-desc,"depositar")]
 
 
 *** Keywords ***
@@ -184,7 +193,7 @@ Então será possível visualizar e clicar no botão de Escontrar Atalhos
     Espera o elemento e faz o clique    ${BTN_ATALHO}
 
 # CARTÃO DE CREDITO
-Dado que o usuário está tela inicial
+Dado que o usuário está na tela inicial
     Visualiza texto    ${NAME}    Olá, Breno Freitas
 
 Quando acessar à funcionalidade de cartão de crédito
@@ -222,4 +231,40 @@ Então será possível verificar acessar o histórico de gastos do cartão de cr
     Swipe By Percent    50    50    50    20
     Visualiza texto    ${TXT_HISTORICO1}    Pagamento recebido\nOntem\nVOCÊ PAGOU R$ 50,00\nR$ 30,00\nPix
     Visualiza texto    ${TXT_HISTORICO2}    Supermercado\nOntem\nBRENO FREITAS\nR$ 30,00\nPix
-    Visualiza texto    ${TXT_HISTORICO3}   Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix
+    Visualiza texto    ${TXT_HISTORICO3}    Transferência enviada\nOntem\nBRENO FREITAS\nR$ 30,00\nPix
+
+#depósito
+
+Quando acessar a funcionalidade de depósito
+    Espera o elemento e faz o clique    ${BTN_DEP}
+
+Então será possível visualizar todas as informações relacionadas à funcionalidade
+    Visualiza texto    ${DEPOSITO_PAGE}            Como você quer depositar na sua conta do Nubank
+    Visualiza texto    ${DEPOSITAR_PIX}            Pix\nSem custo e cai na hora, mesmo de madrugada e fim de semana.
+    Visualiza texto    ${DEPOSITAR_BOLETO}         Boleto\nSem custo e pode levar 3 dias úteis para o dinheiro cair.
+    Visualiza texto    ${DEPOSITAR_TED}            TED/DOC\nPode ter custo e cai somente em horário comercial de dias úteis.
+    Visualiza texto    ${DEPOSITAR_SALARIO}        Trazer seu salário\nReceba todo mês direto aqui na sua conta, sem custo.
+
+E será possível retornar à página inicial clicando no botão X
+    Espera o elemento e faz o clique    ${BTN_DEPOSITO_VOLTAR}
+    Visualiza texto    ${NAME}    Olá, Breno Freitas
+    
+
+#emprestimo
+Quando acessar a funcionalidade de empréstimo
+    Swipe By Percent    90    40   30   40
+    Espera o elemento e faz o clique    ${BTN_EMPRESTIMO}
+
+Então será possível visualizar todas funções relacionadas    
+    Visualiza texto    ${EMPRESTIMO_PAGE}    O valor disponível no momento é de R$ 10.000,00
+    Visualiza texto    ${TXT_EMPRESTIMO2}    Este valor pode mudar diariamente devido à nossa análise de crédito.
+    Element Should Be Enabled    ${LINK_EMPRESTIMO}
+    Espera o elemento e faz o clique    ${BTN_NOVO_EMPRESTIMO}
+
+E será possível retornar à página inicial
+    Espera o elemento e faz o clique    ${BTN_EMPRESTIMO_VOLTAR}
+    Visualiza texto    ${NAME}    Olá, Breno Freitas
+    
+
+Então será possível visualizar botão de informações
+    Visualiza elemento    ${INFO_EMPRESTIMO_ICON}

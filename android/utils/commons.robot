@@ -23,5 +23,5 @@ Visualiza conteudo
     Should Contain    ${hint}    ${nome}
 
 Visualiza elemento
-    [Arguments]                  ${elemento}
+    [Arguments]                      ${elemento}
     Wait Until Element Is Visible    ${elemento}

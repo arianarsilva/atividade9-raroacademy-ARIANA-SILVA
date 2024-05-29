@@ -117,4 +117,3 @@ Verificar botão de Atalhos da página inicial
     Dado que o usuário está logado
     Quando acessar à página inicial
     Então será possível visualizar e clicar no botão de Escontrar Atalhos
-

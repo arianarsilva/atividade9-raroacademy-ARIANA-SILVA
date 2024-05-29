@@ -6,9 +6,18 @@ Test Setup         Abrir App
 Test Teardown      Teardown
 
 *** Test Cases ***
-Então será possível visualizar e clicar no botão de empréstimo
-    Swipe By Percent    90    40   10   40
-    Visualiza texto    ${TXT_EMPRESTIMO}    Empréstimos
-    Espera o elemento e faz o clique    ${BTN_EMPRESTIMO}
-    Visualiza texto    ${EMPRESTIMO_PAGE}    O valor disponível no momento é de R$ 10.000,00
-    Visualiza texto    $elemento    $nome
+Verificar botão de empréstimo da página inicial
+    Dado que o usuário está na tela inicial
+    Quando acessar a funcionalidade de empréstimo
+    Então será possível visualizar todas funções relacionadas
+    E será possível retornar à página inicial
+
+Verificar botão de informações da tela de empréstimo
+    Dado que o usuário está na tela inicial
+    Quando acessar a funcionalidade de empréstimo
+    Então será possível visualizar botão de informações
+
+
+
+
+
