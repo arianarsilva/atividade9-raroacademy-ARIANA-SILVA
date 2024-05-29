@@ -48,3 +48,13 @@ Verificar funcionalidade de pagamento pelo WhatsApp
     Dado que o usuário está logado
     Quando acessar à página inicial
     Então será possível visualizar informações sobre pagamento pelo WhatsApp
+
+Verificar card de empréstimo no carrossel
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar card de empréstimo
+
+Verificar card "Opções de guardar dinheiro" no carrossel
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar card
