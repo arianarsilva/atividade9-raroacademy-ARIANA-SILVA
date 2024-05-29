@@ -6,7 +6,6 @@ Resource    ../base.robot
 
 ${ANDROID_AUTOMATION_NAME}        UiAutomator2
 ${ANDROID_PLATFORM_NAME}          Android
-${ANDROID_PLATFORM_VERSION}       11
 ${ANDROID_APP_ACTIVITY}           .MainActivity
 ${ANDROID_APP_PACKAGE}            com.ricardodalarme.nubank_clone
 ${APPIUM_URL}                     http://127.0.0.1:4723
@@ -15,7 +14,7 @@ ${APPIUM_URL}                     http://127.0.0.1:4723
 
 Abrir App
     Open Application   ${APPIUM_URL}    automationName=${ANDROID_AUTOMATION_NAME}    platformName=${ANDROID_PLATFORM_NAME}    
-    ...    platformVersion=${ANDROID_PLATFORM_VERSION}    appActivity=${ANDROID_APP_ACTIVITY}    appPackage=${ANDROID_APP_PACKAGE}
+    ...     appActivity=${ANDROID_APP_ACTIVITY}    appPackage=${ANDROID_APP_PACKAGE}
 
 Teardown
     Run Keyword If Test Failed    Capture Page Screenshot

@@ -9,23 +9,37 @@ ${prefixo_text}
 
 ${ICONE_PERFIL}                 xpath=//android.widget.ScrollView/android.view.View[1]
 ${SALDO_INICIO}                 xpath=//android.view.View[contains(@content-desc,"R$ 181,79")]
-${BTN_PIX}                      xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]
 ${NAME}                         xpath=//android.view.View[@content-desc="Olá, Breno Freitas"]
-${CONTA_TEXTO}                  xpath=//android.view.View[@content-desc="Saldo disponível"]
-${DINHEIRO_TEXT}                xpath=//android.view.View[contains(@content-desc,"Dinheiro guardado")]
 ${MEUS_CARTOES}                 xpath=//android.view.View[@content-desc="Meus cartões"]
 ${EYE_ICON}                     xpath=//android.widget.ScrollView/android.widget.Button[1]
+${INFO_ICON}                    xpath=//android.widget.ScrollView/android.widget.Button[2]
+${CONVITE_ICON}                 xpath=//android.widget.ScrollView/android.widget.Button[3]
 ${SALDO_OCULTO}                 xpath=//android.view.View[contains(@content-desc,"Conta")]
 ${FATURA_INFO}                  xpath=//android.view.View[contains(@content-desc,"Cartão de Crédito")]
 ${EMPRESTIMO_CARD}              xpath=//android.view.View[contains(@content-desc,"Valor disponível de até")]
 ${INVESTIMENTO_CARD}            xpath=//android.view.View[contains(@content-desc,"Investimentos")]
-${INV_BTN}                      xpath=//android.view.View[contains(@content-desc,"Conhecer")]
 ${SEGURO_CARD}                  xpath=//android.view.View[contains(@content-desc,"Seguro de vida")]
 ${EMPRESTIMO_CARROSSEL}         xpath=//android.view.View[contains(@content-desc,"empréstimo.")]
-&{POUP_CARROSSEL}               xpath=//android.view.View[contains(@content-desc,"Conquiste")]
+${POUP_CARROSSEL}               xpath=//android.view.View[contains(@content-desc,"Conquiste")]
+${WPP_CARD}                     xpath=//android.view.View[contains(@content-desc,"WhatsApp")]
+${CARD_INDIQUE}                  xpath=//android.view.View[contains(@content-desc,"Indique seus amigos")]
+${TXT_CONTA}                    xpath=//android.view.View[@content-desc="Saldo disponível"]
+${TXT_DINHEIRO}                 xpath=//android.view.View[contains(@content-desc,"Dinheiro guardado")]
+${TXT_PIX}                      xpath=//android.view.View[@content-desc="Pix"]
+${TXT_PAGAR}                    xpath=//android.view.View[@content-desc="Pagar"]
+${TXT_TRANSF}                   xpath=//android.view.View[@content-desc="Transferir"]
+${TXT_DEP}                      xpath=//android.view.View[@content-desc="Depositar"]
 
+${BTN_INDICAR_AMIGOS}           xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
+${BTN_INDIQUE}                  xpath=//android.view.View[@content-desc="Indicar amigos"]
+${BTN_WPP}                      xpath=//android.view.View[contains(@content-desc,"Quero conhecer")]  
+${BTN_INV}                      xpath=//android.view.View[contains(@content-desc,"Conhecer")]
+${BTN_PIX}                      xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[1]
+${BTN_PAGAR}                    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BTN_TRANSF}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${BTN_DEP}                      xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
 
-
+${INDIQUE_PAGE}                xpath=//android.widget.ImageView[contains(@content-desc,"Resgate")]
 *** Keywords ***
 Dado que o usuário está logado
     Visualiza elemento   ${ICONE_PERFIL}
@@ -42,10 +56,18 @@ Então será possível acessar informações de cartões
 E clicar no ícone "olho"
     Espera o elemento e faz o clique    ${EYE_ICON}
 
+Então será possível visualizar ícone de informações
+    Espera o elemento e faz o clique    ${INFO_ICON}
+
+Então será possível visualizar ícone de convite
+    Espera o elemento e faz o clique    ${CONVITE_ICON}
+
 Então será possível ocultar saldo da tela incial
     Visualiza elemento    ${SALDO_OCULTO}
 
+
 Então será possível visualizar informações sobre a fatura atual
+    Visualiza texto    ${FATURA_INFO}    Cartão de Crédito
     Visualiza texto    ${FATURA_INFO}    Fatura atual
     Visualiza texto    ${FATURA_INFO}    R$ 780,72
     Visualiza texto    ${FATURA_INFO}    Limite disponível
@@ -59,8 +81,8 @@ Então será possível visualizar informações sobre empréstimo
 
 Então será possível visualizar informações sobre investimentos
     Swipe By Percent    50    50    50    0
-    Visualiza texto    ${INVESTIMENTO_CARD}    Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital.
-
+    Visualiza texto       ${INVESTIMENTO_CARD}    Investimentos\nA revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital.
+    Visualiza elemento    ${BTN_INV}
     Espera o elemento e faz o clique    ${INVESTIMENTO_CARD}
 
 Então será possível visualizar informações sobre Seguro de Vida
@@ -69,10 +91,35 @@ Então será possível visualizar informações sobre Seguro de Vida
 
 Então será possível visualizar informações sobre pagamento pelo WhatsApp
     Swipe By Percent    50    90    50    0
+    Visualiza texto    ${WPP_CARD}    WhatsApp\nNovo\nPagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa.
+    Espera o elemento e faz o clique   ${BTN_WPP}
 
+Então será possível visualizar funcionalidade de indicar amigos
+      Swipe By Percent    50    90    50    0
+      Swipe By Percent    90    80    20    80
+      Visualiza texto    ${CARD_INDIQUE}   Indique seus amigos\nMostre aos seus amigos como é fácil ter uma vida sem burocracia.
+      Espera o elemento e faz o clique    ${BTN_INDIQUE}
+      Visualiza texto    ${INDIQUE_PAGE}    Resgate seus amigos da fila do banco\nPara cada indicação aceita, um amigo salvo da burocracia
+        
 Então será possível visualizar card de empréstimo
     Visualiza texto    ${EMPRESTIMO_CARROSSEL}    Você tem R$ 10.000,00 disponíveis para empréstimo.
 
 Então será possível visualizar card
     Swipe By Percent    50    70    0    70
-    Wait Until Page Contains    Conquiste planos futuros: conheça as opções para guardar dinheiro.
+    Visualiza texto    ${POUP_CARROSSEL}    Conquiste planos futuros: conheça as opções para guardar dinheiro.
+
+Então será possível visualizar e clicar no botão de pix
+    Visualiza texto    ${TXT_PIX}    Pix
+    Espera o elemento e faz o clique    ${BTN_PIX}
+
+Então será possível visualizar e clicar no botão de pagar
+    Visualiza texto    ${TXT_PAGAR}    Pagar
+    Espera o elemento e faz o clique    ${BTN_PAGAR}
+
+Então será possível visualizar e clicar no botão de transferir
+    Visualiza texto    ${TXT_TRANSF}    Transferir
+    Espera o elemento e faz o clique    ${BTN_TRANSF}
+
+Então será possível visualizar e clicar no botão de depositar
+    Visualiza texto    ${TXT_DEP}    Depositar
+    Espera o elemento e faz o clique    ${BTN_DEP}
