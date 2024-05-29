@@ -93,3 +93,28 @@ Verificar botão de depositar da página inicial
     Quando acessar à página inicial
     Então será possível visualizar e clicar no botão de depositar
 
+Verificar botão de Empréstimo da página inicial
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar e clicar no botão de empréstimo
+
+Verificar botão de Recarga de celular da página inicial
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar e clicar no botão de recarga de celular
+
+Verificar botão de Cobrar da página inicial
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar e clicar no botão de Cobrar
+
+Verificar botão de Doação da página inicial
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar e clicar no botão de Doação
+
+Verificar botão de Atalhos da página inicial
+    Dado que o usuário está logado
+    Quando acessar à página inicial
+    Então será possível visualizar e clicar no botão de Escontrar Atalhos
+

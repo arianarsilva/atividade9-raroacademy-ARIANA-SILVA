@@ -22,13 +22,18 @@ ${SEGURO_CARD}                  xpath=//android.view.View[contains(@content-desc
 ${EMPRESTIMO_CARROSSEL}         xpath=//android.view.View[contains(@content-desc,"empréstimo.")]
 ${POUP_CARROSSEL}               xpath=//android.view.View[contains(@content-desc,"Conquiste")]
 ${WPP_CARD}                     xpath=//android.view.View[contains(@content-desc,"WhatsApp")]
-${CARD_INDIQUE}                  xpath=//android.view.View[contains(@content-desc,"Indique seus amigos")]
+${CARD_INDIQUE}                 xpath=//android.view.View[contains(@content-desc,"Indique seus amigos")]
 ${TXT_CONTA}                    xpath=//android.view.View[@content-desc="Saldo disponível"]
 ${TXT_DINHEIRO}                 xpath=//android.view.View[contains(@content-desc,"Dinheiro guardado")]
 ${TXT_PIX}                      xpath=//android.view.View[@content-desc="Pix"]
 ${TXT_PAGAR}                    xpath=//android.view.View[@content-desc="Pagar"]
 ${TXT_TRANSF}                   xpath=//android.view.View[@content-desc="Transferir"]
 ${TXT_DEP}                      xpath=//android.view.View[@content-desc="Depositar"]
+${TXT_EMPRESTIMO}               xpath=//android.view.View[@content-desc="Empréstimos"]
+${TXT_RECARGA}                  xpath=//android.view.View[@content-desc="Recarga de celular"]
+${TXT_COBRAR}                   xpath=//android.view.View[@content-desc="Cobrar"]
+${TXT_DOAR}                     xpath=//android.view.View[@content-desc="Doação"]
+${TXT_ATALHO}                   xpath=//android.view.View[@content-desc="Encontrar atalhos"] 
 
 ${BTN_INDICAR_AMIGOS}           xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
 ${BTN_INDIQUE}                  xpath=//android.view.View[@content-desc="Indicar amigos"]
@@ -38,8 +43,18 @@ ${BTN_PIX}                      xpath=//android.widget.ScrollView/android.widget
 ${BTN_PAGAR}                    xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
 ${BTN_TRANSF}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
 ${BTN_DEP}                      xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BTN_EMPRESTIMO}               xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BTN_RECARGA}                  xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[2]
+${BTN_COBRAR}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[3]
+${BTN_DOAR}                     xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[4]
+${BTN_ATALHO}                   xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
 
-${INDIQUE_PAGE}                xpath=//android.widget.ImageView[contains(@content-desc,"Resgate")]
+${INDIQUE_PAGE}                 xpath=//android.widget.ImageView[contains(@content-desc,"Resgate")]
+${EMPRESTIMO_PAGE}              xpath=//android.view.View[@content-desc="O valor disponível no momento é de R$ 10.000,00"]
+${COBRAR_PAGE}                   xpath=//android.widget.EditText[@text="R$ 0,00"]
+
+
+
 *** Keywords ***
 Dado que o usuário está logado
     Visualiza elemento   ${ICONE_PERFIL}
@@ -123,3 +138,30 @@ Então será possível visualizar e clicar no botão de transferir
 Então será possível visualizar e clicar no botão de depositar
     Visualiza texto    ${TXT_DEP}    Depositar
     Espera o elemento e faz o clique    ${BTN_DEP}
+
+Então será possível visualizar e clicar no botão de empréstimo
+    Swipe By Percent    90    40   10   40
+    Visualiza texto    ${TXT_EMPRESTIMO}    Empréstimos
+    Espera o elemento e faz o clique    ${BTN_EMPRESTIMO}
+
+Então será possível visualizar e clicar no botão de recarga de celular
+    Swipe By Percent    90    40   0   40
+    Visualiza texto    ${TXT_RECARGA}    Recarga de Celular
+    Espera o elemento e faz o clique    ${BTN_RECARGA}
+
+Então será possível visualizar e clicar no botão de Cobrar
+    Swipe By Percent    90    40   0   40
+    Visualiza texto    ${TXT_COBRAR}    Cobrar
+    Espera o elemento e faz o clique    ${BTN_COBRAR}
+    Visualiza conteudo   ${COBRAR_PAGE}    Qual valor você quer receber?
+    
+
+Então será possível visualizar e clicar no botão de Doação
+    Swipe By Percent    90    40   0   40
+    Visualiza texto    ${TXT_DOAR}    Doação
+    Espera o elemento e faz o clique    ${BTN_DOAR}
+
+Então será possível visualizar e clicar no botão de Escontrar Atalhos
+    Swipe By Percent    90    40   0   40
+    Visualiza texto    ${TXT_ATALHO}    Encontrar atalhos
+    Espera o elemento e faz o clique    ${BTN_ATALHO}
