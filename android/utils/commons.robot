@@ -22,6 +22,12 @@ Visualiza conteudo
     ${hint}=    AppiumLibrary.Get Element Attribute    ${elemento}    hint 
     Should Contain    ${hint}    ${nome}
 
+Visualiza valor
+    [Arguments]    ${elemento}    ${numero}
+    Element Should Be Visible    ${elemento}
+    ${text}=    AppiumLibrary.Get Element Attribute    ${elemento}    text 
+    Should Contain    ${text}    ${numero}
+
 Visualiza elemento
     [Arguments]                      ${elemento}
     Wait Until Element Is Visible    ${elemento}

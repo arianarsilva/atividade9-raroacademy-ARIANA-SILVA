@@ -10,6 +10,17 @@ Verificar informações sobre cartão de crédito
     Dado que o usuário está na tela inicial
     Quando acessar à funcionalidade de cartão de crédito
     Então será possível verificar as informações sobre a fatura atual
+    E será possível retornar à página inicial clicando em <
+
+Verificar ícone de pesquisa na tela de cartão de crédito
+    Dado que o usuário está na tela inicial
+    Quando acessar à funcionalidade de cartão de crédito
+    Então será possível visualizar o ícone de pesquisa
+
+Verificar ícone de informações na tela de cartão de crédito
+    Dado que o usuário está na tela inicial
+    Quando acessar à funcionalidade de cartão de crédito
+    Então será possível visualizar o ícone de informações
 
 Acessar botão de pagar fatura
     Dado que o usuário está na tela inicial

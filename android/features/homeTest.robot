@@ -76,12 +76,12 @@ Verificar card "Opções de guardar dinheiro" no carrossel
 Verificar botão de pix da página inicial
     Dado que o usuário está logado
     Quando acessar à página inicial
-    Então será possível visualizar e clicar no botão de pix
+    Então será possível acessar às funcionalidades da ferramenta pix
 
 Verificar botão de pagar da página inicial
     Dado que o usuário está logado
     Quando acessar à página inicial
-    Então será possível visualizar e clicar no botão de pagar
+    Então será possível acessar às funcionalidade de pagamentos
 
 Verificar botão de transferir da página inicial
     Dado que o usuário está logado
@@ -102,11 +102,12 @@ Verificar botão de Recarga de celular da página inicial
     Dado que o usuário está logado
     Quando acessar à página inicial
     Então será possível visualizar e clicar no botão de recarga de celular
+    E o usuário poderá inserir seu número para recarga
 
 Verificar botão de Cobrar da página inicial
     Dado que o usuário está logado
     Quando acessar à página inicial
-    Então será possível visualizar e clicar no botão de Cobrar
+    Então será possível acessar às funcionalidades de cobrança
 
 Verificar botão de Doação da página inicial
     Dado que o usuário está logado
